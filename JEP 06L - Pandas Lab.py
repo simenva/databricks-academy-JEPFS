@@ -21,7 +21,14 @@
 
 # COMMAND ----------
 
-# TODO
+import pandas as pd
+
+data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+column_names = ["one", "two", "three"]
+
+df = pd.DataFrame(data=data, columns = column_names)
+print(df)
+type(df)
 
 # COMMAND ----------
 
@@ -30,7 +37,12 @@
 
 # COMMAND ----------
 
-# TODO
+cols_to_show = ["three"]
+df[cols_to_show]
+
+# COMMAND ----------
+
+df[["three"]]
 
 # COMMAND ----------
 
@@ -39,7 +51,7 @@
 
 # COMMAND ----------
 
-# TODO
+df["three"]
 
 # COMMAND ----------
 
@@ -48,7 +60,7 @@
 
 # COMMAND ----------
 
-# TODO
+df.two[1]
 
 # COMMAND ----------
 
@@ -57,7 +69,8 @@
 
 # COMMAND ----------
 
-# TODO
+df["row sum"] = df["one"] + df["two"] + df["three"]
+df
 
 # COMMAND ----------
 
