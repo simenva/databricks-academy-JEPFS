@@ -130,19 +130,18 @@ financial_district_df
 
 # COMMAND ----------
 
+#suggested solution
 financial_district_df.groupby(by="property_type").count().plot(kind="bar", y="beds")
 
 # COMMAND ----------
 
+#my tweaked favorite
+#property_type er kolonnen som det grupperes på, men det telles over neighborhood_cleansed kolonnen
 financial_district_df.groupby(by="property_type")["neighbourhood_cleansed"].count().plot(kind="bar")
 
 # COMMAND ----------
 
-financial_district_df.groupby(by="property_type").count("beds").plot(kind="bar")
-
-# COMMAND ----------
-
-financial_district_df.groupby("property_type").sum().hist()
+financial_di
 
 # COMMAND ----------
 
